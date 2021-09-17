@@ -1,0 +1,85 @@
+Web storage: 
+
+    Website Dependant,
+     Forever storage
+
+    localStorage.setItem('name',"Shubham")
+    localStorage.getItem("name")
+
+Session storage
+
+    Website Dependent, session Dependant
+
+    sessionStorage.setItem('name',"Shubham")
+    sessionStorage.getItem("name")
+
+Cookies
+
+    Data store...
+    stores key value pairs
+
+    Cookies are page Dependant
+    mapped to the Website
+
+    communicates to servers, sends itself to servers
+    is similiar to local/session storage but it can be sent with 
+        a webpage to servers
+
+    We can give expiry time in Cookies
+    ex: login time...expires in 30 days..google/facebook
+    acts as a security feature 
+
+Working:
+
+Check if main is initialized or not
+
+        If yes, nevermind...
+        If no, Set item with key = 'main' and value = ''
+            in local storage
+
+We will be using a string 'list' to do string operations
+
+setCookie 
+    
+    1) Take Input(key,value)
+    2) Check if 'main' is empty or not...
+            If yes, Save 'key' in "main" and "list" 
+            If no, Save 'key' in "list" and 
+                re-set the value of "main" = "list"
+
+    3) Take 2nd input(key,value)
+    4) Append 2nd key to the 1st key, add a comma and Save it 
+       again to main
+
+
+Working(2.0):
+
+Check if main is initialized or not
+
+        If yes, nevermind...
+        If no, Set item with key = 'main' and value = ''
+            in local storage
+
+We will be using an array 'list' to do string operations
+
+setCookie 
+    
+    1) Take Input(key,value)
+    2) Check if 'main' is empty or not...
+            If yes, Save 'key' in "main" and "list" 
+            If no, Save 'key' in "list" and 
+                re-set the value of "main" = "list"
+                
+    3) Take 2nd input(key,value)
+    4) Append 2nd key to the 1st key, add a comma and Save it 
+       again to main
+
+Bug Discussion
+
+1) deleteCookie()
+
+    Problem arises when multiple keys have to be deleted
+
+2) ListCookise()
+
+    "undefined" is popping up first, I have no idea why 

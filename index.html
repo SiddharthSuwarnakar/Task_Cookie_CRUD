@@ -4,24 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Task - Cookie</title>
 </head>
 <body>
-    <h1>Set a new cookie</h1>
-    <label>Key</label>
-    <input type="text"></input>
-    <label>Value</label>
-    <input type="text"></input>
-    <button>ADD</button>
-    <h1>Get value of the cookie</h1>
-    <label>Key</label>
-    <input type="text"></input>
-    <button>GET</button>
-    <h1>Delete the cookie</h1>
-    <label>Key</label>
-    <input type="text"></input>
-    <button>Delete</button>
-    <h1>List all cookies</h1>
+<div class="container">    
+    <div class="setter">
+        
+        <h1>Task-3 Cookies</h1>
+        
+        <p>Javascript Cookies are not the best functinality for codes if used natively. <br> It is a bit painful. Why not solve this problem? <br><br>
+        Create Set, Get functions for cookies, so that accessing data via cookies becomes easy.</p>
+        
+        <h2>Set a new cookie</h2>
+        
+        <label>Key &nbsp </label>
+        <input id="new_cookie_key" type="text"></input>
+        
+        <br><br>
+        
+        <label>Value</label>
+        <input id="new_cookie_value" type="text"></input>
 
+        <button onclick = "setCookie()">Add</button>
+
+    </div>
+    
+    <div class="getter">
+
+        <h2>Get value of the cookie</h2>
+
+        <label>Key &nbsp </label>
+        <input id = "get_cookie_key" type="text"></input>
+        <button onclick =" getCookie()">Get</button><br><br>
+        <label>Key Value : &nbsp </label><label id = "get_cookie_value"></label>
+
+    </div>
+    
+    <div class="delete">
+
+        <h2>Delete the cookie</h2>
+        <label>Key &nbsp </label>
+        <input id = "delete_cookie_key" type="text"></input>
+        <button onclick = "deleteCookie()">Delete</button>
+
+    </div>    
+
+    <div class="list">
+
+        <h2>List all cookies</h2>
+        <button onclick = "listCookies()"></button>
+        <p id = "list_all_cookies"></p>
+        
+    </div>
+</div>
+    <script src="script.js"></script>
 </body>
 </html>
